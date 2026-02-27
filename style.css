@@ -24,20 +24,25 @@ body {
 }
 
 #portfolio-container {
+    width: 100%;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
 }
 
 .module {
     width: 100%;
     position: relative;
-    border-bottom: 1px solid #222;
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
 }
 
 .image-module img {
     display: block;
     width: 100%;
     height: auto;
+    vertical-align: middle;
 }
 
 .video-module {
@@ -48,15 +53,14 @@ body {
 /* Global Video Container Reset */
 .video-container {
     width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
     position: relative;
     background: #000;
 }
 
 .video-container video {
     width: 100%;
-    height: auto;
     display: block;
     background: #000;
 }
@@ -77,6 +81,8 @@ body {
 .about-section {
     padding: 100px 5%;
     background-color: var(--bg-color);
+    width: 100%;
+    margin: 0;
 }
 
 .about-grid {
@@ -240,6 +246,8 @@ body {
 .contents-section {
     padding: 80px 5%;
     background: #111;
+    width: 100%;
+    margin: 0;
 }
 
 .contents-list {
@@ -328,53 +336,44 @@ body {
 }
 
 /* Vertical Module Styles (Restored) */
-.module {
-    width: 100%;
-    position: relative;
-    border-bottom: 1px solid #222;
-}
-
-.image-module img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.video-module {
-    background: #000;
-    width: 100%;
-}
+/* Redundant declarations removed to prevent conflicts */
 
 /* Portrait Video Container */
 .portrait-container {
-    max-width: 450px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
 }
 
 /* Horizontal Reels Row */
 .reels-row {
     display: flex;
-    gap: 20px;
-    padding: 60px 10%;
+    gap: 0;
+    padding: 0;
     background: #000;
-    max-width: 1400px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
 }
 
 .reels-row .portrait-container {
-    flex: 1;
+    flex: 1 1 0;
     margin: 0;
+    padding: 0;
     max-width: none;
     aspect-ratio: 9 / 16;
     position: relative;
     background: #000;
+    overflow: hidden;
 }
 
 .reels-row .portrait-container video {
-    width: 100%;
+    width: 101%;
+    /* Slight overlap to prevent sub-pixel gaps */
     height: 100%;
     object-fit: cover;
     display: block;
+    margin: 0;
+    padding: 0;
 }
 
 /* Mobile Responsiveness Improvements */
